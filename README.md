@@ -1,7 +1,8 @@
 # requestclient
 
-[![Build Status](https://travis-ci.org/ernestas-poskus/requestclient.svg?branch=master)](https://travis-ci.org/ernestas-poskus/requestclient)
-[![GoDoc](http://godoc.org/github.com/ernestas-poskus/requestclient?status.svg)](http://godoc.org/github.com/ernestas-poskus/requestclient)
+[![Build
+Status](https://travis-ci.org/linkosmosis/requestclient.svg?branch=master)](https://travis-ci.org/linkosmosis/requestclient)
+[![GoDoc](http://godoc.org/github.com/linkosmosis/requestclient?status.svg)](http://godoc.org/github.com/linkosmosis/requestclient)
 [![BSD License](http://img.shields.io/badge/license-BSD-blue.svg)](http://opensource.org/licenses/BSD-3-Clause)
 
 HTTP request client exposing:
