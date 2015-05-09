@@ -40,7 +40,7 @@ responseClient, err := client.Do(client.GET(u)) // For higher level API
 
 ```
 
-Options:
+### Options
 
 ```go
 ////////////////////////////////
@@ -144,6 +144,11 @@ Package uses two interfaces one for http.Client, other for http.Transport. One c
 easily replace default transport or client wiht custom by satisfying interfaces below.
 
 ```go
+// DialDialer - is an interface for connecting to an address.
+type DialDialer interface {
+	Dial(network, address string) (net.Conn, error)
+}
+
 // RoundTripper is an interface representing the ability to execute a
 // single HTTP transaction, obtaining the Response for a given Request.
 //

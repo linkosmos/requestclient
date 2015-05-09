@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-// DialDialer -
+// DialDialer - is an interface for connecting to an address.
 type DialDialer interface {
 	Dial(network, address string) (net.Conn, error)
 }
@@ -33,7 +33,7 @@ type RoundTripper interface {
 	RoundTrip(*http.Request) (*http.Response, error)
 }
 
-// ClientRequester - interface for http.Client
+// ClientRequester - higher level API that implements http.Client
 type ClientRequester interface {
 	Do(req *http.Request) (*http.Response, error)
 }
