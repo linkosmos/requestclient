@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"net/http"
 
-	"github.com/ernestas-poskus/httpcontrol"
+	"github.com/facebookgo/httpcontrol"
 	"github.com/linkosmosis/requestclient/dialer"
 )
 
