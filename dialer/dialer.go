@@ -27,12 +27,12 @@ func New() *Dialer {
 func (d *Dialer) Dial(network, address string) (net.Conn, error) {
 	tcpAddr, err := d.AddrsPool.Get(address)
 	if err != nil {
-		log.Println("Failed to resolve:", err)
+		log.Printf("Failed to resolve: %s, fallback dialer.Dial", address)
 		return d.Dialer.Dial(network, address)
 	}
 	c, err := net.DialTCP(network, nil, tcpAddr)
 	if err != nil {
-		log.Println("Failed to setup DialTCP:", err)
+		log.Printf("Failed to setup DialTCP: %s, fallback dialer.Dial", err)
 		return d.Dialer.Dial(network, address)
 	}
 	if d.KeepAlive != 0 {
