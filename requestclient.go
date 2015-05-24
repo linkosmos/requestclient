@@ -57,22 +57,17 @@ type RequestClient struct {
 	Client ClientRequester
 }
 
-// SetupNewDialer - setups new requestclient Dialer with specified options
-func SetupNewDialer(op *Options) (dl *dialer.Dialer) {
-	dl = dialer.New()
-	dl.Timeout = op.DialerTimeout
-	dl.Deadline = op.DialerDeadline
-	dl.DualStack = op.DialerDualStack
-	dl.KeepAlive = op.DialerKeepAlive
-	dl.DualStack = op.DialerDualStack
-	return dl
-}
-
 // New - returns Request Client
 func New(op *Options) (r *RequestClient) {
 	if op == nil {
 		op = NewOptions()
 	}
+	d := dialer.New()
+	d.Timeout = op.DialerTimeout
+	d.Deadline = op.DialerDeadline
+	d.DualStack = op.DialerDualStack
+	d.KeepAlive = op.DialerKeepAlive
+	d.DualStack = op.DialerDualStack
 	r = &RequestClient{
 		Headers:           op.Headers,
 		RequestProto:      RequestProto,
@@ -81,7 +76,7 @@ func New(op *Options) (r *RequestClient) {
 		TLS: &tls.Config{
 			InsecureSkipVerify: op.TLSInsecureSkipVerify,
 		},
-		Dialer: SetupNewDialer(op), // Setting Dialer
+		Dialer: d, // Setting Dialer
 	}
 
 	// Setting up TRANSPORT
