@@ -4,7 +4,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/linkosmosis/godns"
+	"github.com/linkosmos/godns"
 )
 
 // Dialer -

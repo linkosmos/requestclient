@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/facebookgo/httpcontrol"
-	"github.com/linkosmosis/requestclient/dialer"
+	"github.com/linkosmos/requestclient/dialer"
 )
 
 // -
