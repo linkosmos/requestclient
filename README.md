@@ -176,4 +176,10 @@ type RoundTripper interface {
 type ClientRequester interface {
 	Do(req *http.Request) (*http.Response, error)
 }
+
+// Requester - wraps RoundTripper & ClientRequester
+type Requester interface {
+	Do(*http.Request) (*http.Response, error)
+	RoundTrip(*http.Request) (*http.Response, error)
+}
 ```
