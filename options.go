@@ -38,6 +38,9 @@ func NewOptions() (op *Options) {
 		TLSInsecureSkipVerify:        DefaultTLSInsecureSkipVerify,
 	}
 	op.SetUserAgent(DefaultUserAgent)
+	if !op.TransportDisableKeepAlives {
+		op.Headers.Add("Connection", "Keep-Alive")
+	}
 	return op
 }
 
