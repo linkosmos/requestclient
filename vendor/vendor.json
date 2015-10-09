@@ -1,0 +1,21 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"path": "github.com/Sirupsen/logrus",
+			"revision": "418b41d23a1bf978c06faea5313ba194650ac088",
+			"revisionTime": "2015-09-08T20:46:18Z"
+		},
+		{
+			"path": "github.com/facebookgo/httpcontrol",
+			"revision": "ccde4420e1fee9af5da365cb76075b95683f39a6",
+			"revisionTime": "2015-07-08T23:40:01Z"
+		},
+		{
+			"path": "github.com/linkosmos/godns",
+			"revision": "19251e83a713a0d61b3a4385f7ef29bab8761c17",
+			"revisionTime": "2015-10-09T07:35:50+03:00"
+		}
+	]
+}
