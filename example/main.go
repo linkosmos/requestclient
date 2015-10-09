@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/ernestas-poskus/requestclient"
+	"github.com/linkosmos/requestclient"
 )
 
 func main() {
