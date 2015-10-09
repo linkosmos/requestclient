@@ -14,7 +14,7 @@ type Redirect struct {
 // DefaultCheckRedirect - default check redirect function from http.Client
 func (r *Redirect) DefaultCheckRedirect(req *http.Request, via []*http.Request) error {
 	if len(via) >= r.StopAfter {
-		return fmt.Errorf("Stopped after %d redirects")
+		return fmt.Errorf("Stopped after %d redirects", len(via))
 	}
 	return nil
 }
