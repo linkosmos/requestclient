@@ -1,5 +1,7 @@
 # requestclient
 
+## Deprecated in favor of: https://github.com/linkosmos/rehttp
+
 [![Build
 Status](https://travis-ci.org/linkosmos/requestclient.svg?branch=master)](https://travis-ci.org/linkosmos/requestclient)
 [![GoDoc](http://godoc.org/github.com/linkosmos/requestclient?status.svg)](http://godoc.org/github.com/linkosmos/requestclient)
